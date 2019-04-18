@@ -16,6 +16,7 @@ window.onload = function () {
         };
 
     function initialize() {
+
         clock.startClock();
         //document.getElementById('currentAnalog').innerHTML = clock.startClock();
         //document.getElementById('currentDigital').innerHTML = clock.startClock();
@@ -32,6 +33,21 @@ window.onload = function () {
         document.getElementById('today').innerHTML = currentDay + ' , ' + currentMonth + ' ' + currentDate + ' ' + currentYear;
 
         document.getElementById('digital-clock').innerHTML = currentHours + ' : ' + currentMints + ' : ' + currentSecs;
+
+        setInterval(function () {
+            clock.startClock();
+            currentDay = days[clock.currentTime.getDay()];
+            currentDate = clock.currentTime.getDate();
+            currentMonth = months[clock.currentTime.getMonth()];
+            currentYear = clock.currentTime.getFullYear();
+            currentHours = clock.currentTime.getHours();
+            currentMints = clock.currentTime.getMinutes();
+            currentSecs = clock.currentTime.getSeconds();
+            document.getElementById('today').innerHTML = currentDay + ' , ' + currentMonth + ' ' + currentDate + ' ' + currentYear;
+
+            document.getElementById('digital-clock').innerHTML = currentHours + ' : ' + currentMints + ' : ' + currentSecs;
+        }, 1000);
+
         activateAnalog();
         registerClickEvents();
     }
