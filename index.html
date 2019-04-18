@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel=stylesheet type="text/css" href="css/style.css">
+    <script src="js/data.js"></script>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="wrap main-class" id="clock">
+            <div class="navbar">
+                <div class='header' id='header'>
+                    <div class='menu' id='menu'>
+                        <div class='menu-container' id='menu-container'>
+                            <div class='alarm-menu-title' id='alarm-menu-title'>
+                                <div class='alarm-label' id='alarm-label'>
+                                    ALARM</div>
+                            </div>
+                            <div class='clock-menu-title' id='clock-menu-title'>
+                                <div class='clock-label' id='clock-label'>
+                                    CLOCK</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='help' id='help'></div>
+                </div>
+                <div class='clock-screen group-1' id='clock-screen'>
+                    <div class='today' id='today'></div>
+                    <div class="toolbar">
+                        <div class="toolbar-inner">
+                            <div class='analog-label label-container' id='analog-label'>
+                                <span class="link analog-link">ANALOGUE</span>
+                            </div>
+                            <span class='pipe-separator'> | </span>
+                            <div class='digital-label label-container' id='digital-label'>
+                                <span class="link digital-link">DIGITAL</span>
+                            </div>
+                            <span 'pipe-separator'> | </span>
+                            <div class='mixed-label label-container' id='mixed-label'>
+                                <span class="link mixed-link">MIXED</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="analog-clock-container"></div>
+                    <div id='currentAnalog' class='current-analog-clock'>
+                        <div class="clock-hours-hand" id="hours-hand"></div>
+                        <div class="clock-minutes-hand" id="minutes-hand"></div>
+                        <div class="clock-seconds-hand" id="seconds-hand"></div>
+                        <span class="clock__dial-hour clock__dial-hour--main three">3</span>
+                        <span class="clock__dial-hour clock__dial-hour--main six">6</span>
+                        <span class="clock__dial-hour clock__dial-hour--main nine">9</span>
+                        <span class="clock__dial-hour clock__dial-hour--main twelve">12</span>
+                    </div>
+                    <div class="digital-clock-container">
+                        <div id='currentDigital' class='current-digital-clock'>
+                            <div id="digital-clock">
+                            </div>
+                            <div class='digital-clock-label-container'>
+                                <div id="digital-clock-label" class='digital-hours digital-clock-label'>
+                                    HRS
+                                </div>
+                                <div id="digital-clock-label" class='digital-mins digital-clock-label'>
+                                    MIN'S
+                                </div>
+                                <div id="digital-clock-label" class='digital-secs digital-clock-label'>
+                                    SEC'S
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id='currentDigital'>
+
+                    </div>
+                    <div class="mixed-clock-container"></div>
+                </div>
+
+                <div class='alarm-screen group-2' id='alarm-screen'>
+                    <div class='alarm-list-no-alarm' id='alarm-list-no-alarm'>There are no alarms</div>
+                    <div class='alarm-list' id='alarm-list'>
+
+                    </div>
+                    <div class='alarm-button'>
+                        <button type="button" id='add-alarm-button'>Add Alarm</button>
+                    </div>
+                </div>
+
+                <div class='add-alarm-screen group-3' id='add-alarm-screen'>
+                    <div class='add-alarm-label'> Set an Alarm</div>
+                    <div class='alarm-form'>
+                        <form>
+                            <input type='number' min='0' max='12' id='alarm-hour' />
+                            <input type='number' min='0' max='60' id='alarm-mins' />
+                            <div id='optRadio'>
+                                <label class="radio-inline">
+                                    <input type="radio" name="optradio" value='am' checked>AM
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" name="optradio" value='pm'>PM
+                                </label>
+                            </div>
+                            <div id='repeat-days'>
+                                <label href="#" for='monday'>
+                                    <input type="checkbox" class="days monday" id='monday' value='monday'>
+                                    <span>M</span>
+                                </label>
+
+                                <label href="#" for='tuesday'>
+                                    <input type="checkbox" class="days tuesday" id='tuesday' value='tuesday'>
+                                    <span>T</span>
+                                </label>
+
+                                <label href="#" for='wednesday'>
+                                    <input type="checkbox" class="days wednesday" id='wednesday' value='wednesday'>
+                                    <span>W</span>
+                                </label>
+                                <label href="#" for='thursday'>
+                                    <input type="checkbox" class="days thursday" id='thursday' value='thursday'>
+                                    <span>T</span>
+                                </label>
+
+                                <label href="#" for='friday'>
+                                    <input type="checkbox" class="days friday" id='friday' value='friday'>
+                                    <span>F</span>
+                                </label>
+
+                                <label href="#" for='saturday'>
+                                    <input type="checkbox" class="days saturday" id='saturday' value='saturday'>
+                                    <span>S</span>
+                                </label>
+                                <label href="#" for='sunday'>
+                                    <input type="checkbox" class="days sunday" id='sunday' value='sunday'>
+                                    <span>S</span>
+                                </label>
+
+                            </div>
+
+
+                        </form>
+                    </div>
+                    <div class='save-alarm-button'>
+                        <button type="button" id='save-alarm'>Done</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
